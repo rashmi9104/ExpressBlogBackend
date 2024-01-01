@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
 const Connection = async(username, password)=>{
+    
     const URL = `mongodb+srv://${username}:${password}@blogproject.9w3qjsh.mongodb.net/`;
     try{
         await mongoose.connect(URL,{useNewUrlParser: true})

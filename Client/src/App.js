@@ -8,18 +8,18 @@ import Header2 from './Components/Header/Header2';
 import HeroSection from './Components/HeroSection/HeroSection';
 import TrendingPart from './Components/TrendingPart/TrendingPart';
 import Login from './Components/Accounts/Login';
+import Register from './Components/Accounts/Register';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Header2/>  
-      <Body2/>
-      {/* <Header/>
-      <HeroSection/>
-      <TrendingPart/>
-      <Discover/> */}
-      <Footer/>
-      {/* <Login/> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path='/login' element={<Login/>} />
+          <Route path='/register' element={<Register/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
